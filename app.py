@@ -109,7 +109,7 @@ while True:
                 # Use the higher of the calibrated max or default if calibration hasn't been done.
                 effective_max = calibrated_max_distance if calibrated_max_distance > default_max_distance else default_max_distance
                 brightness = map_distance_to_brightness(distance, min_dist=0, max_dist=effective_max)
-                cv2.putText(frame, f"Brightness: {brightness}%", (10, 80),
+                cv2.putText(frame, f"Power: {brightness}%", (10, 80),
                             cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
                 last_detection_time = time.time()
     else:
